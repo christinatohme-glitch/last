@@ -1,0 +1,31 @@
+TALYFOCOUS — MICROSOFT STORE: MAIN FILE + REQUIRED FILES
+==========================================================
+
+Project folder: C:\Users\Dell\Desktop\visionbooks
+
+
+MAIN FILE TO UPLOAD (after build)
+---------------------------------
+
+  The built MSIX package from the dist folder:
+
+    dist\Talyfocous-<version>-win-x64.appx
+
+  Example:
+    dist\Talyfocous-1.1.0-win-x64.msix   (same package type — .appx from build)
+
+  Partner Center accepts the .appx file from dist\ as your Store package.
+
+
+FILES YOU MUST PREPARE BEFORE BUILDING
+--------------------------------------
+
+  store-publisher.config.json     Partner Center Publisher (CN=...)
+  store.config.json               Subscription add-on Store ID
+  public/privacy.html             Privacy policy (host online for listing)
+  store-assets/STORE_LISTING.txt  Store description text
+  build/icon.ico                  App icon (npm run build:icon)
+  build/msix-desktop-shortcut.xml Desktop shortcut in MSIX manifest
+  electron-builder.store.cjs      Store MSIX/AppX build config
+
+See MICROSOFT_STORE.md in the project for the full step-by-step guide.

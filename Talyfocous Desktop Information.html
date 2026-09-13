@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talyfocous - Desktop Information</title>
+  <style>
+    :root {
+      --bg: #f5f3ee;
+      --panel: #fffdf8;
+      --ink: #1f2937;
+      --muted: #5b6472;
+      --accent: #1f6f78;
+      --accent-2: #8b5e34;
+      --border: rgba(31, 41, 55, 0.12);
+      --shadow: 0 18px 45px rgba(23, 31, 46, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(31,111,120,0.16), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(139,94,52,0.14), transparent 28%),
+        linear-gradient(160deg, #faf7f0 0%, #f0ede7 100%);
+      padding: 32px;
+    }
+    .sheet {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: rgba(255, 253, 248, 0.92);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(6px);
+    }
+    .hero {
+      padding: 40px;
+      background: linear-gradient(135deg, rgba(31,111,120,0.12), rgba(139,94,52,0.12));
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--border);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+    h1 {
+      margin: 18px 0 10px;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    .lede {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .content {
+      padding: 34px 40px 42px;
+      display: grid;
+      gap: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 10px 22px rgba(23, 31, 46, 0.04);
+    }
+    .span-4 { grid-column: span 4; }
+    .span-6 { grid-column: span 6; }
+    .span-12 { grid-column: span 12; }
+    .tag {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(31,111,120,0.09);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+    }
+    p, li {
+      margin: 0;
+      color: #374151;
+      line-height: 1.7;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      display: grid;
+      gap: 8px;
+    }
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .meta div {
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: rgba(31,111,120,0.05);
+      border: 1px solid rgba(31,111,120,0.12);
+    }
+    .meta strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--accent-2);
+    }
+    .footer {
+      padding-top: 6px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    @media (max-width: 900px) {
+      body { padding: 16px; }
+      .hero, .content { padding-left: 20px; padding-right: 20px; }
+      .span-4, .span-6, .span-12 { grid-column: span 12; }
+      .meta { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <section class="hero">
+      <div class="brand">Talyfocous Accounting System</div>
+      <h1>Desktop Information Sheet</h1>
+      <p class="lede">Talyfocous is a local-first accounting system designed for Windows users who need invoices, accounting, inventory, payroll, and reporting in one place. After Microsoft Store installation, the app can create a desktop shortcut so users can open it directly from the desktop icon.</p>
+    </section>
+
+    <section class="content">
+      <div class="grid">
+        <article class="card span-4">
+          <div class="tag">Offline</div>
+          <h2>Works without internet</h2>
+          <p>Your financial data stays on the PC in local storage. The app can be used offline for day-to-day accounting, and internet is only needed for Store delivery, updates, or optional online features you decide to enable.</p>
+        </article>
+
+        <article class="card span-4">
+          <div class="tag">Multi-user</div>
+          <h2>Supports multiple users and companies</h2>
+          <p>Talyfocous can manage more than one company file and supports local-network sharing workflows when enabled by the system administrator. That makes it practical for small teams and multi-branch bookkeeping.</p>
+        </article>
+
+        <article class="card span-4">
+          <div class="tag">Desktop</div>
+          <h2>One-click opening from the desktop</h2>
+          <p>The Microsoft Store package is prepared to create a desktop shortcut. When the user clicks the Talyfocous icon, the system opens directly.</p>
+        </article>
+
+        <article class="card span-6">
+          <div class="tag">Features</div>
+          <h2>Main features</h2>
+          <ul>
+            <li>Journal vouchers for invoices, receipts, payments, and adjustments</li>
+            <li>Chart of accounts, account statements, and currency support</li>
+            <li>Trial balance, balance sheet, profit and loss, and cash flow reports</li>
+            <li>Inventory, stock movements, and purchase/sales workflows</li>
+            <li>Payroll templates and tax-related pages</li>
+            <li>Bank reconciliation and import support for common file formats</li>
+          </ul>
+        </article>
+
+        <article class="card span-6">
+          <div class="tag">Why it is strong</div>
+          <h2>Why users choose it</h2>
+          <ul>
+            <li>Fast local performance because data is stored on the device</li>
+            <li>Simple desktop access for daily use</li>
+            <li>Business workflows grouped in one system instead of many tools</li>
+            <li>Designed for accountants and small businesses that want control over their data</li>
+            <li>Easy to publish through Microsoft Store as an installable Windows app</li>
+          </ul>
+        </article>
+
+        <article class="card span-12">
+          <div class="tag">Summary</div>
+          <h2>Short user message</h2>
+          <div class="meta">
+            <div><strong>Offline-first</strong>Talyfocous runs locally on the computer.</div>
+            <div><strong>Multi-user ready</strong>It can support shared and multi-company workflows.</div>
+            <div><strong>Desktop shortcut</strong>The Store package is set up so the icon appears on the desktop.</div>
+            <div><strong>Business focused</strong>It combines accounting, inventory, payroll, and reports.</div>
+          </div>
+          <p class="footer">If you want, open the Microsoft Store listing copy in <em>store-assets/STORE_LISTING.txt</em> and the privacy policy in <em>public/privacy.html</em>.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

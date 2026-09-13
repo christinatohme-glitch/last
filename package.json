@@ -1,0 +1,87 @@
+{
+  "name": "visionbooks",
+  "version": "1.4.9",
+  "description": "Talyfocous accounting app with local SQLite storage",
+  "main": "electron/main.js",
+  "author": "Talyfocous",
+  "scripts": {
+    "start": "node --max-old-space-size=8192 server.js",
+    "desktop": "electron .",
+    "build:store-bridge": "dotnet publish store-bridge/StoreBridge.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o store-bridge/bin/publish",
+    "build:icon": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/ensure-app-icon.ps1",
+    "prepare:store": "node scripts/prepare-store-build.js",
+    "dist": "npm run build:icon && electron-builder --win portable nsis",
+    "dist:desktop": "npm run build:icon && npm install && electron-builder --win nsis",
+    "dist:portable": "electron-builder --win portable",
+    "dist:installer": "electron-builder --win nsis",
+    "dist:store": "node scripts/prepare-store-build.js && npm run build:icon && node scripts/build-store-bridge-if-needed.js && electron-builder --config electron-builder.store.cjs --win appx",
+    "shortcut": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/create-desktop-shortcut.ps1"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "html2canvas": "^1.4.1",
+    "mammoth": "^1.12.0",
+    "pdfjs-dist": "^6.0.227",
+    "sql.js": "^1.13.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@electron/get": "^5.0.0",
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.talyfocous.visionbooks",
+    "productName": "Talyfocous",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist/**",
+      "!data/**",
+      "!**/.git/**",
+      "!store-bridge/obj/**",
+      "!store-bridge/bin/**"
+    ],
+    "extraResources": [
+      {
+        "from": "store-bridge/bin/publish/StoreBridge.exe",
+        "to": "store-bridge/StoreBridge.exe"
+      }
+    ],
+    "icon": "build/icon.ico",
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "artifactName": "Talyfocous-${version}-${os}-${arch}.${ext}"
+    },
+    "msix": {
+      "identityName": "Talyfocous",
+      "publisher": "CN=REPLACE_WITH_PARTNER_CENTER_PUBLISHER",
+      "publisherDisplayName": "Talyfocous",
+      "applicationId": "Talyfocous",
+      "displayName": "Talyfocous",
+      "languages": [
+        "en-US"
+      ],
+      "showNameOnTiles": true,
+      "customExtensionsPath": "build/msix-desktop-shortcut.xml"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Talyfocous",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico"
+    },
+    "portable": {
+      "artifactName": "Talyfocous-Portable-${version}.exe"
+    }
+  }
+}

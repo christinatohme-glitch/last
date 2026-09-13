@@ -1,0 +1,46 @@
+Talyfocous - Microsoft Store Publish Checklist
+=============================================
+
+1. Partner Center Setup
+- Create or sign in to your Microsoft Partner Center account
+- Reserve the app name Talyfocous
+- Copy the Publisher, Identity Name, Publisher Display Name, and Application ID
+
+2. Subscription Setup
+- Create a subscription add-on in Partner Center
+- Copy the subscription add-on Store ID
+- Put it into store.config.json before building the MSIX
+
+3. Required Files in This Repo
+- store-publisher.config.json: Partner Center publisher identity
+- store.config.json: subscription add-on Store ID
+- public/privacy.html: privacy policy page
+- store-assets/STORE_LISTING.txt: store listing text
+- build/icon.ico: app icon for the package
+- build/msix-desktop-shortcut.xml: desktop shortcut extension for MSIX
+- electron-builder.store.cjs: MSIX build configuration
+
+4. Build Steps
+- Run npm install
+- Run npm run build:icon
+- Run npm run build:store-bridge
+- Run npm run dist:store
+
+5. Store Submission Items
+- MSIX package from the dist folder
+- Store screenshots at 1366 x 768 or larger
+- Store logo at 300 x 300 PNG
+- Privacy policy URL
+- Category: Business > Accounting & finance
+- Pricing: subscription add-on linked in Partner Center
+
+6. What Users Get After Install
+- The Talyfocous icon appears on the desktop
+- Clicking the icon opens the system
+- The app can work offline
+- The app supports multi-company and shared workflows when enabled
+
+7. Final Review
+- Make sure the publisher value matches Partner Center exactly
+- Rebuild the MSIX after any change to store.config.json
+- Upload the MSIX in Partner Center and submit for certification

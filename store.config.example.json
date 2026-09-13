@@ -1,0 +1,6 @@
+{
+  "subscriptionAddonStoreId": "PASTE_YOUR_SUBSCRIPTION_ADDON_STORE_ID_FROM_PARTNER_CENTER",
+  "devBypass": false,
+  "trialDaysPerVersion": 7,
+  "notes": "Copy to store.config.json after reserving the app in Microsoft Partner Center. Create a subscription add-on there; Microsoft handles billing, renewals, and cancellation. Use the add-on Store ID (not the app ID) in subscriptionAddonStoreId."
+}

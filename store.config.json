@@ -1,0 +1,13 @@
+{
+  "subscriptionAddonStoreId": "9NBXM8NHT8S0",
+  "subscriptionPlans": [
+    { "minUsers": 1, "maxUsers": 2, "storeId": "9NBXM8NHT8S0", "label": "Plan 1–2 users" },
+    { "minUsers": 3, "maxUsers": 5, "storeId": "9N7VPNGB47JG", "label": "Plan 3–5 users" },
+    { "minUsers": 6, "maxUsers": 10, "storeId": "9P65ZML5CBSB", "label": "Plan 6–10 users" },
+    { "minUsers": 11, "maxUsers": 20, "storeId": "9N682LV4KR9Q", "label": "Plan 11–20 users" },
+    { "minUsers": 21, "maxUsers": 50, "storeId": "9MZS4JH3RSGM", "label": "Plan 21–50 users" }
+  ],
+  "devBypass": false,
+  "trialDaysPerVersion": 7,
+  "notes": "Copy to store.config.json after reserving the app in Microsoft Partner Center. Create a subscription add-on there; Microsoft handles billing, renewals, and cancellation. Use the add-on Store ID (not the app ID) in subscriptionAddonStoreId."
+}

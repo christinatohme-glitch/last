@@ -1,0 +1,28 @@
+Talyfocous - Microsoft Store Description
+=======================================
+
+Short Description
+Local-first accounting software for invoices, inventory, payroll, bank reconciliation, and reports. Data stays on your PC.
+
+Description
+Talyfocous is a Windows accounting system for small businesses and accountants who want a fast, local-first desktop app.
+
+It helps you manage:
+- Journal vouchers for invoices, receipts, payments, expenses, and adjustments
+- Chart of accounts, account statements, and currency tracking
+- Financial reports including trial balance, balance sheet, profit and loss, and cash flow
+- Inventory workflows for products, stock movements, purchase invoices, and sales invoices
+- Payroll templates and tax-related pages
+- Bank reconciliation and common file imports such as PDF, Excel, Word, CSV, and Google Sheets
+
+Key Benefits
+- Works offline because your data is stored locally on the device
+- Supports multiple companies and shared workflows when local network sharing is enabled
+- Opens from a desktop shortcut after Store installation
+- Keeps accounting, reporting, and inventory in one system
+
+Category
+Business > Accounting & finance
+
+Keywords
+accounting, bookkeeping, invoice, inventory, payroll, trial balance, ledger, small business, ERP

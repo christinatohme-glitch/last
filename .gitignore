@@ -1,0 +1,14 @@
+node_modules/
+dist/
+data/
+*.db
+store.config.json
+store-publisher.config.json
+build/msix-build.config.json
+build/icon.ico
+public/logo.png
+public/logo.ico
+store-bridge/bin/
+store-bridge/obj/
+*.exe
+*.zip

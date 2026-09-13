@@ -1,0 +1,8 @@
+{
+  "publisher": "CN=4E50265F-E2ED-4AB8-A1D0-5261751B3C3E",
+  "identityName": "Talyfocous.Talyfocous",
+  "publisherDisplayName": "Talyfocous",
+  "applicationId": "Talyfocous",
+  "displayName": "Talyfocous",
+  "notes": "Copy to store-publisher.config.json after reserving Talyfocous in Microsoft Partner Center (Apps and games > Your app > Product identity). The publisher value must match exactly — including CN= prefix."
+}
